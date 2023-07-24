@@ -1,0 +1,56 @@
+<template>
+    
+   <div class="slds-align_absolute-center">
+    <lightning-layout  multiple-rows style="background-color:rgb(130, 165, 253);"  horizontal-align="center" >
+      
+        <lightning-layout-item padding="around-small">
+            <div class="header-column">
+            <lightning-combobox
+            label="Locality"
+            placeholder="Select Locality"
+            variant="label-stacked"
+            value={location}
+            field-level-help="Search property based on locality"
+            options={locationOptions}
+            onchange={HandleChangeLocality}>
+        </lightning-combobox>
+    </div>
+       </lightning-layout-item>
+
+        <lightning-layout-item padding="around-small">
+            <div class="header-column">
+            <lightning-combobox
+            label="No of Bedroom"
+            placeholder="Select"
+            variant="label-stacked"
+            value={noofBedroom}
+            field-level-help="Search property based on locality"
+            options={noofBedroomOptions}
+            onchange={HandleChangenoOfBedRoom}>
+        </lightning-combobox>
+    </div>
+        </lightning-layout-item>
+
+        <lightning-layout-item padding="around-small">
+            <div class="header-column">
+            <lightning-combobox
+            label="No of BathRooms"
+            placeholder="Select"
+            variant="label-stacked"
+            value={noofBathroom}
+            field-level-help="Search property based on locality"
+            options={noofBathroomOptions}
+            onchange={HandleChangenoOfBath}>
+        </lightning-combobox>       
+    </div>
+        </lightning-layout-item>
+
+        <lightning-layout-item padding="around-small">
+            <div class="header-column">
+           <lightning-input type="number" value={maxBudget} field-level-help="Search Property based on the budget" name="maxBudget"
+           label="Maximum budget" placeholder="Enter maximum budget" onchange={HandleChangeBudget}></lightning-input>
+        </div>
+        </lightning-layout-item>      
+    </lightning-layout>
+</div>
+</template>
